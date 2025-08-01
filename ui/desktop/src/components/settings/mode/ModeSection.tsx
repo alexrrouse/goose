@@ -68,11 +68,11 @@ export const ModeSection = () => {
       ))}
 
       <div className="pt-6">
-        <h3 className="text-textStandard mb-4 pl-2">Conversation Limits</h3>
+        <h3 className="text-text-default text-xs mb-4 pl-2">Conversation Limits</h3>
         <div className="flex items-center justify-between py-2 px-4">
           <div>
-            <h4 className="text-textStandard">Max Turns</h4>
-            <p className="text-xs text-textSubtle mt-[2px]">
+            <h4 className="text-text-default text-xs">Max Turns</h4>
+            <p className="text-xs text-text-muted mt-[2px]">
               Maximum agent turns before Goose asks for user input
             </p>
           </div>

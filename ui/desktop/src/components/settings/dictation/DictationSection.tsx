@@ -145,12 +145,12 @@ export default function DictationSection() {
   };
 
   return (
-    <section id="dictation" className="px-4">
+    <div>
       {/* Enable/Disable Toggle */}
       <div className="flex items-center justify-between mb-4">
         <div>
-          <h3 className="text-textStandard">Enable Voice Dictation</h3>
-          <p className="text-xs text-textSubtle max-w-md mt-[2px]">
+          <h3 className="text-text-default text-xs">Enable Voice Dictation</h3>
+          <p className="text-xs text-text-muted max-w-md mt-[2px]">
             Show microphone button for voice input
           </p>
         </div>
@@ -164,8 +164,8 @@ export default function DictationSection() {
         <>
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h3 className="text-textStandard">Dictation Provider</h3>
-              <p className="text-xs text-textSubtle max-w-md mt-[2px]">
+              <h3 className="text-text-default text-xs">Dictation Provider</h3>
+              <p className="text-xs text-text-muted max-w-md mt-[2px]">
                 Choose how voice is converted to text
               </p>
             </div>
@@ -211,8 +211,8 @@ export default function DictationSection() {
           {showElevenLabsKey && (
             <div className="mb-4">
               <div className="mb-2">
-                <h3 className="text-textStandard">ElevenLabs API Key</h3>
-                <p className="text-xs text-textSubtle max-w-md mt-[2px]">
+                <h3 className="text-text-default text-xs">ElevenLabs API Key</h3>
+                <p className="text-xs text-text-muted max-w-md mt-[2px]">
                   Required for ElevenLabs voice recognition
                   {hasElevenLabsKey && <span className="text-green-600 ml-2">(Configured)</span>}
                 </p>
@@ -232,28 +232,28 @@ export default function DictationSection() {
           )}
 
           {/* Provider-specific information */}
-          <div className="mt-4 p-3 bg-bgSubtle rounded-md">
+          <div className="mt-4 p-3 rounded-md">
             {settings.provider === 'openai' && (
-              <p className="text-xs text-textSubtle">
+              <p className="text-xs text-text-muted">
                 Uses OpenAI's Whisper API for high-quality transcription. Requires an OpenAI API key
                 configured in the Models section.
               </p>
             )}
             {settings.provider === 'elevenlabs' && (
               <div>
-                <p className="text-xs text-textSubtle">
+                <p className="text-xs text-text-muted">
                   Uses ElevenLabs speech-to-text API for high-quality transcription.
                 </p>
-                <p className="text-xs text-textSubtle mt-2">
+                <p className="text-xs text-text-muted mt-2">
                   <strong>Features:</strong>
                 </p>
-                <ul className="text-xs text-textSubtle ml-4 mt-1 list-disc">
+                <ul className="text-xs text-text-muted ml-4 mt-1 list-disc">
                   <li>Advanced voice processing</li>
                   <li>High accuracy transcription</li>
                   <li>Multiple language support</li>
                   <li>Fast processing</li>
                 </ul>
-                <p className="text-xs text-textSubtle mt-2">
+                <p className="text-xs text-text-muted mt-2">
                   <strong>Note:</strong> Requires an ElevenLabs API key with speech-to-text access.
                 </p>
               </div>
@@ -261,6 +261,6 @@ export default function DictationSection() {
           </div>
         </>
       )}
-    </section>
+    </div>
   );
 }
